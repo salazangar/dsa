@@ -29,7 +29,7 @@ public class Main {
             minCost += a+b;
             q.add(a+b);
         }
-       
+
         return minCost;
     }
 
