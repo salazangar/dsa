@@ -8,7 +8,8 @@ import java.util.Comparator;
 public class Main {
     public static void main(String[] args) {
         int[][] arr = {{5,9}, {1,2}, {3,4}, {0,6}, {5,7}, {8,9}};
-        System.out.println("\n" + findMaxActivities(arr) + "max activities");
+        System.out.println("\n" + findMaxActivities(arr) + "max activities"); // greedy
+        // also can use priority queue
     }
 
     public static int findMaxActivities(int[][] arr){
