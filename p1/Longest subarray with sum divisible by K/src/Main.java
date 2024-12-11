@@ -34,7 +34,7 @@ public class Main {
         Map<Integer, Integer> map = new HashMap<>();
         int sum = 0;
         int max = 0;
-        int rem = 0;
+        int rem;
 
         for (int i = 0; i < n; i++) {
             sum += arr[i];
