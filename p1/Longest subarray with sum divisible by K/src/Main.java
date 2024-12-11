@@ -32,22 +32,22 @@ public class Main {
         int n = arr.length;
 
         Map<Integer, Integer> map = new HashMap<>();
-        int[] rem_arr = new int[n];
         int sum = 0;
         int max = 0;
+        int rem = 0;
 
         for (int i = 0; i < n; i++) {
             sum += arr[i];
 
-            rem_arr[i] = ((sum %k) + k) % k;   // accounting for negative sum value also
+            rem = ((sum %k) + k) % k;   // accounting for negative sum value also
 
-            if(rem_arr[i] == 0){
+            if(rem == 0){
                 max = i + 1;
-            } else if (!map.containsKey(rem_arr[i])) {
-                map.put(rem_arr[i], i);
+            } else if (!map.containsKey(rem)) {
+                map.put(rem, i);
             }else{
-                if(max < i - map.get(rem_arr[i])){
-                    max = i - map.get(rem_arr[i]);
+                if(max < i - map.get(rem)){
+                    max = i - map.get(rem);
                 }
             }
         }
