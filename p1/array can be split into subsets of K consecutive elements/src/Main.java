@@ -8,12 +8,14 @@
 // {1, 2, 3}, {2, 3, 4} and {6, 7, 8} such that each subset consists of 3 consecutive elements.
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 6, 2, 3, 4, 7, 8};
         int k = 3;
-        System.out.println(canSplitArray(arr, k));
+        System.out.println(canSplitArrayCount(arr, k));  // only if no gap in sequence of numbers // wrong
     }
 
     public static boolean canSplitArray(int[] arr, int K) {
@@ -32,4 +34,39 @@ public class Main {
         }
         return true;
     }
+
+    public static boolean canSplitArrayCount(int[] arr, int k){
+        int n = arr.length;
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int x : arr){
+            map.put(x, map.getOrDefault(x,0)+1);
+        }
+
+        Arrays.sort(arr);
+
+        for (int num : arr){
+            if(map.containsKey(num)){
+                for (int i = num; i < num + k; i++){
+                    if(!map.containsKey(i)){
+                        return false;
+                    }
+
+                    map.put(i, map.get(i)-1);
+
+                    if(map.get(i) == 0){   // remove if used up
+                        map.remove(i);
+                    }
+                }
+            }
+        }
+        return true;
+    }
 }
+
+
+
+
+
+
+
