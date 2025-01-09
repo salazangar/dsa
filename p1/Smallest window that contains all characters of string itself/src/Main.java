@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String s = "aabcbcdb";
+        String s = "aabcbcdbca";
         System.out.println(smallestWindowBrute(s));
     }
 
@@ -26,10 +26,10 @@ public class Main {
             int visited[] = new int[256];
             Arrays.fill(visited, 0);
             String sub = "";
-            for (int j = 0; j < n; j++) {
-                if(visited[s.charAt(i)]==0){
+            for (int j = i; j < n; j++) {
+                if(visited[s.charAt(j)]==0){
                     count++;
-                    visited[s.charAt(i)] = 1;
+                    visited[s.charAt(j)] = 1;
                 }
                 sub += s.charAt(j);
                 if(count == distinctCount) break;
@@ -39,6 +39,6 @@ public class Main {
                 size = res.length();
             }
         }
-        return res;
+        return res ;
     }
 }
