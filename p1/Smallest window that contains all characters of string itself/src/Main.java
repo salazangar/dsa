@@ -6,7 +6,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         String s = "aabcbcdbca";
-        System.out.println(smallestWindowBrute(s));
+//        System.out.println(smallestWindowBrute(s));
+        System.out.println(smallestWindowSlidingWindow(s));
     }
 
     public static String smallestWindowBrute(String s){
@@ -40,5 +41,17 @@ public class Main {
             }
         }
         return res ;
+    }
+
+    public static String smallestWindowSlidingWindow(String s){
+        int n = s.length();
+        int[] visited = new int[256];
+
+        int start = 0;
+        int end = 0;
+        int min = 0;
+        String minWindow = "";
+
+
     }
 }
