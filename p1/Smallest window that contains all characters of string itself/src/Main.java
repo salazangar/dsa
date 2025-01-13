@@ -45,13 +45,43 @@ public class Main {
 
     public static String smallestWindowSlidingWindow(String s){
         int n = s.length();
-        int[] visited = new int[256];
+        boolean[] visited = new boolean[256];
+        Arrays.fill(visited,false);
+        int distinct = 0;
+
+        for(char c : s.toCharArray()){
+            if( !visited[c]){
+                visited[c] = true;
+                distinct++;
+            }
+        }
 
         int start = 0;
-        int end = 0;
-        int min = 0;
+        int min = Integer.MAX_VALUE;
         String minWindow = "";
+        int[] charCount = new int[256];
+        int count = 0;
 
+        for(int i = 0; i < n; i++){
+            charCount[s.charAt(i)]++;
 
+            if(charCount[s.charAt(i)] == 1){
+                count++;
+            }
+
+            if(distinct == count){
+                while(charCount[s.charAt(start)] > 1) {
+                    charCount[s.charAt(start)]--;
+                    start++;
+                }
+
+                int currLength = i - start + 1;
+                if(currLength < min) {
+                    min = currLength;
+                    minWindow = s.substring(start, start + min);
+                }
+            }
+        }
+        return minWindow;
     }
 }
