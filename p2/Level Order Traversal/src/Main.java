@@ -1,7 +1,5 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
 class Node{
@@ -28,8 +26,8 @@ public class Main {
 
         // Perform level order traversal
 //        ArrayList<ArrayList<Integer>> res = levelOrderStack(root);
-        ArrayList<ArrayList<Integer>> res= levelOrderQueue(root);
-
+//        ArrayList<ArrayList<Integer>> res= levelOrderQueue(root);
+        ArrayList<ArrayList<Integer>> res= levelOrderSpiral(root);
 
         for(ArrayList<Integer> list : res){
             System.out.println(list);
@@ -84,11 +82,39 @@ public class Main {
         }
         return res;
     }
+
+    public static ArrayList<ArrayList<Integer>> levelOrderSpiral(Node root){
+        Queue<Node> q = new LinkedList<>();
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+
+        q.add(root);
+        int level = 0;
+
+        while(!q.isEmpty()){
+            int len = q.size();
+            int[] arr = new int[len];
+            for (int i = 0; i < len; i++){
+                Node curr = q.poll();
+                arr[i] = curr.data;
+
+                if(curr.left != null) q.add(curr.left);
+                if(curr.right != null) q.add(curr.right);
+            }
+            res.add(new ArrayList<>());
+            if(level % 2 == 0){
+                for (int i = len -1 ; i >= 0; i--) {
+                    res.get(level).add(arr[i]);
+                }
+            }else{
+                for (int i = 0 ; i < len; i++) {
+                    res.get(level).add(arr[i]);
+                }
+            }
+            level++;
+        }
+        return res;
+    }
 }
-
-
-
-
 
 
 
