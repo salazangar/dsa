@@ -51,7 +51,7 @@ https://www.geeksforgeeks.org/divide-binary-array-into-three-equal-parts-with-sa
 https://www.geeksforgeeks.org/decode-string-recursively-encoded-count-followed-substring/						Y
 https://www.geeksforgeeks.org/smallest-window-contains-characters-string/										Y
 https://www.geeksforgeeks.org/the-stock-span-problem/
-https://www.geeksforgeeks.org/maximum-contiguous-circular-sum/								
+https://www.geeksforgeeks.org/maximum-contiguous-circular-sum/														
 https://www.geeksforgeeks.org/palindrome-pair-in-an-array-of-words-or-strings/
 https://www.geeksforgeeks.org/find-triplets-array-whose-sum-equal-zero/
 https://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/
@@ -85,18 +85,18 @@ https://leetcode.com/problems/split-array-largest-sum
 https://leetcode.com/problems/minimum-space-wasted-from-packaging
 
 P2
-https://www.geeksforgeeks.org/print-left-view-binary-tree/
-https://www.geeksforgeeks.org/bottom-view-binary-tree/
-https://www.geeksforgeeks.org/print-binary-tree-vertical-order-set-2/
-https://www.geeksforgeeks.org/print-binary-tree-vertical-order/
-https://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/
-https://www.geeksforgeeks.org/zigzag-tree-traversal/
-https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/
-https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/
-https://www.geeksforgeeks.org/convert-given-binary-tree-doubly-linked-list-set-3/
-https://www.geeksforgeeks.org/iterative-function-check-two-trees-identical/
-https://www.geeksforgeeks.org/write-c-code-to-determine-if-two-trees-are-identical/
-https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/
+https://www.geeksforgeeks.org/print-left-view-binary-tree/														Y	
+https://www.geeksforgeeks.org/bottom-view-binary-tree/															Y
+https://www.geeksforgeeks.org/print-binary-tree-vertical-order-set-2/											Y
+https://www.geeksforgeeks.org/print-binary-tree-vertical-order/													Y
+https://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/												Y
+https://www.geeksforgeeks.org/zigzag-tree-traversal/															Y
+https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/										Y
+https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/									Y
+https://www.geeksforgeeks.org/convert-given-binary-tree-doubly-linked-list-set-3/								-/Y
+https://www.geeksforgeeks.org/iterative-function-check-two-trees-identical/										Y
+https://www.geeksforgeeks.org/write-c-code-to-determine-if-two-trees-are-identical/								Y/-
+https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/													Y
 https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/
 https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/
 https://www.geeksforgeeks.org/find-maximum-path-sum-two-leaves-binary-tree/
