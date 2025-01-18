@@ -26,6 +26,13 @@ public class Main {
         root.left.right = new Node(5);
 
         System.out.println(countLeaves(root));
+        System.out.println(countLeavesRecursion(root));
+    }
+
+    private static int countLeavesRecursion(Node root) {
+        if(root == null)return 0;
+        if(root.left == null && root.right == null) return 1;
+        return countLeavesRecursion(root.left) + countLeavesRecursion(root.right);
     }
 
     public static int countLeaves(Node root){
